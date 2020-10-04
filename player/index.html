@@ -4,18 +4,16 @@
 <head>
     <title>Player example</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome.min.css">
     <style type="text/css">
-        .player {
+        #player {
             width: 800px;
             height: 600px;
             box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             }
-        .js-video-container {
-            flex-grow: 1;
-            }
+        .js-video-container {flex-grow: 1;}
         .menu {
             background-color:black;
             line-height: 150%;
@@ -29,16 +27,13 @@
             margin: 0.5%;
             }
         i {color:white;}
-        .empty {
-            flex-grow: 1;
-        }
+        #empty {flex-grow: 1;}
     </style>
 </head>
 
 <body>
-    <div id="player" class="player">
+    <div id="player">
         <div class="js-video-container"></div>
-        <!-- Here can be placed player controls: play and volume buttons -->
         <div class="menu">
             <button class="js-play-button">
                 <i class="fa fa-play" aria-hidden="true"></i>
@@ -52,11 +47,10 @@
             <button class="js-mute-button" hidden>
                 <i class="fa fa-volume-up" aria-hidden="true"></i>
             </button>
-            <div class="empty"></div>
+            <div id="empty"></div>
             <button class="js-fullscreen-button">
                 <i class="fa fa-arrows-alt" aria-hidden="true"></i>
             </button>
-            
         </div>
         
     </div>
@@ -69,5 +63,4 @@
     </script>
 
 </body>
-
 </html>
