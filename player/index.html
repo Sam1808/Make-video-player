@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style type="text/css">
         .player {
             width: 800px;
@@ -24,14 +25,26 @@
         .player-button {
             border-style: none;
             background-color: transparent;
-            padding: 5px;
+            padding: 6px;
             margin: 0px;
             height: 43px;
-            width: 36.5px;
+            width: 33px;
             font-size: 15pt;
             }
+        .fullscreen {
+            padding: 6px 10px 6px 6px;
+        }
         .player-icon {color:white;}
-        .player-empty-space {flex-grow: 1;}
+        .viewing-panel {
+            padding: 7px 5px 4px 5px;
+            margin: 0px;
+            flex-grow: 1;
+            display: flex;
+            font-size: 12pt;
+            }
+        .viewing-progress {
+            flex-grow: 1;
+            }
     </style>
 </head>
 
@@ -39,22 +52,41 @@
     <div id="player" class="player">
         <div class="video-container js-video-container"></div>
         <div class="player-menu">
-            <button class="player-button js-play-button">
-                <i class="fa fa-play player-icon" aria-hidden="true"></i>
-            </button>
-            <button class="player-button js-pause-button" hidden>
-                <i class="fa fa-pause player-icon" aria-hidden="true"></i>
-            </button>
-            <button class="player-button js-volume-button">
-                <i class="fa fa-volume-off player-icon" aria-hidden="true"></i>
-            </button>
-            <button class="player-button js-mute-button" hidden>
-                <i class="fa fa-volume-up player-icon" aria-hidden="true"></i>
-            </button>
-            <div class="player-empty-space"></div>
-            <button class="player-button js-fullscreen-button">
-                <i class="fa fa fa-expand player-icon" aria-hidden="true"></i>
-            </button>
+            
+            <div class="left buttons">
+                <button class="player-button play js-play-button">
+                    <i class="fa fa-play player-icon" aria-hidden="true"></i>
+                </button>
+                <button class="player-button pause js-pause-button" hidden>
+                    <i class="fa fa-pause player-icon" aria-hidden="true"></i>
+                </button>
+                <button class="player-button volume-off js-volume-button">
+                    <i class="fa fa-volume-off player-icon" aria-hidden="true"></i>
+                </button>
+                <button class="player-button volume-up js-mute-button" hidden>
+                    <i class="fa fa-volume-up player-icon" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <div class="viewing-panel">
+                <div class="viewing-time" style="color: white;">
+                    <span style="font-family: 'Roboto', sans-serif;" class="js-current-time"></span>
+                </div>
+                <div class="viewing-progress">
+                    <div class="js-progress" style="background-color: grey;">
+                        <div class="js-progress-slider" style="background-color: red;">Progress</div>
+                    </div>
+                </div>
+                <div class="video-duration" style="color: white;">
+                    <span style="font-family: 'Roboto', sans-serif;" class="js-duration"></span>
+                </div>
+            </div>
+         
+            <div class="right-buttons">
+                <button class="player-button fullscreen js-fullscreen-button">
+                    <i class="fa fa fa-expand player-icon" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
         
     </div>
