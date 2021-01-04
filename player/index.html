@@ -42,10 +42,35 @@
             display: flex;
             font-size: 12pt;
             }
-        .viewing-progress {
+        .viewing-progress{
             flex-grow: 1;
+            display: flex;
+
+        }
+        .viewing-progress-slider {            
+            border: 2px solid #f8104d;
+            border-radius: 25px;
+            height: 0px;
+            margin-top: 13px;
+            margin-left: 9px;
+            
             }
+        .video-progress-free-space{
+            flex-grow: 1;
+        }
+        .dot {            
+            height: 8px;
+            width: 8px;
+            background-color: red;
+            border: solid white;
+            border-radius: 50%;
+            display: inline-block;
+            margin-top: 8px;   
+            margin-left: -8px;         
+        }
+        
     </style>
+    
 </head>
 
 <body>
@@ -72,21 +97,25 @@
                 <div class="viewing-time" style="color: white;">
                     <span style="font-family: 'Roboto', sans-serif;" class="js-current-time"></span>
                 </div>
-                <div class="viewing-progress">
-                    <div class="js-progress" style="background-color: grey;">
-                        <div class="js-progress-slider" style="background-color: red;">Progress</div>
-                    </div>
+                
+                <div class="viewing-progress js-progress">
+                    <div class="viewing-progress-slider js-progress-slider"></div>
+                    <div><span class="dot"></span></div>
                 </div>
+
+                <div class="video-progress-free-space"></div>
+                
                 <div class="video-duration" style="color: white;">
                     <span style="font-family: 'Roboto', sans-serif;" class="js-duration"></span>
                 </div>
             </div>
-         
+            
             <div class="right-buttons">
                 <button class="player-button fullscreen js-fullscreen-button">
                     <i class="fa fa fa-expand player-icon" aria-hidden="true"></i>
                 </button>
             </div>
+            
         </div>
         
     </div>
