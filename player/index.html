@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Player example</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <style>
+        :focus { outline: none; }
         .player {
             width: 800px;
             height: 600px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
             display: flex;
             flex-direction: column;
-            }
+        }
         .video-container {flex-grow: 1;}
         .player-menu {
             background-color:black;
             line-height: 150%;
             font-size: 15pt;
             display: flex;
-            }
+        }
         .player-button {
             border-style: none;
             background-color: transparent;
@@ -30,7 +32,7 @@
             height: 43px;
             width: 33px;
             font-size: 15pt;
-            }
+        }
         .fullscreen {
             padding: 6px 10px 6px 6px;
         }
@@ -41,7 +43,7 @@
             flex-grow: 1;
             display: flex;
             font-size: 12pt;
-            }
+        }
         .viewing-progress{
             flex-grow: 1;
             display: flex;
@@ -54,7 +56,7 @@
             margin-top: 13px;
             margin-left: 9px;
             
-            }
+        }
         .dot {            
             height: 8px;
             width: 8px;
@@ -72,7 +74,7 @@
             opacity: 1;
             transition-timing-function: ease-in;
             transition: 600ms;
-            }
+        }
         
     </style>
     
@@ -126,7 +128,7 @@
     <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
     <script src="player.js"></script>
 
-    <script type="text/javascript">
+    <script>
         createPlayer({ elementId: 'player' });
     </script>
 
